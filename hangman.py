@@ -5,9 +5,11 @@ vidas = 6
 words = ['jirafa', 'carroceria', 'estetoscopio', 'vainilla', 'arcoiris', 'leñador']
 
 word = ''
+letter = ''
 def play():
   global vidas
   global word 
+  global letter
   word = random.choice(words)
   while vidas > 0:
     print(drawWord())
@@ -27,7 +29,8 @@ def getAllPositions(word, letter):
 
 def drawWord():
   line = ''
-  
+  #if letter == esta en la palabra
+    # _ = position(letter)
   for pos in words:
     line = line + '_'
   return line
